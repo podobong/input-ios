@@ -1,21 +1,6 @@
 import SwiftUI
 
 
-class Response: ObservableObject {
-    @Published var statusCode: Int
-    @Published var text: String
-    
-    init() {
-        self.statusCode = 0
-        self.text = ""
-    }
-}
-
-enum SJType {
-    case susi
-    case jeongsi
-}
-
 class Schedule: ObservableObject {
     @Published var isValid: Bool
     @Published var description: String
@@ -61,15 +46,15 @@ class JH: ObservableObject {
 }
 
 class SJ: ObservableObject {
-    @Published var type: SJType
+    @Published var type: String
     @Published var jhs: [JH]
     
-    init(type: SJType) {
+    init(type: String) {
         self.type = type
         self.jhs = []
     }
     
-    init(type: SJType, jhs: [JH]) {
+    init(type: String, jhs: [JH]) {
         self.type = type
         self.jhs = jhs
     }

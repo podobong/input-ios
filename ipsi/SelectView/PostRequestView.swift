@@ -1,10 +1,10 @@
 import SwiftUI
 
 
-struct MainView: View {
+struct PostRequestView: View {
     @EnvironmentObject var selected: Univs
     
     var body: some View {
-        Text("MainView")
+        Text("Hello, World!")
     }
 }

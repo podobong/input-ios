@@ -1,10 +1,11 @@
 import SwiftUI
 
 
-struct MainView: View {
+struct AllUnivListLayout: View {
+    var allUnivs: [Univ]
     @EnvironmentObject var selected: Univs
     
     var body: some View {
-        Text("MainView")
+        Text("Hello, World!")
     }
 }
