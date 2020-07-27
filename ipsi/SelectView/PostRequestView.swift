@@ -5,6 +5,22 @@ struct PostRequestView: View {
     @EnvironmentObject var selected: SelectedInfos
     
     var body: some View {
-        Text("PostRequestView")
+        post(url: "http://ec2-54-180-101-171.ap-northeast-2.compute.amazonaws.com/", params: createPostParams()) { (_, _) in }
+        
+        return MainView().environmentObject(self.selected)
+    }
+    
+    func createPostParams() -> [String: String] {
+        var params: [String: String] = [:]
+        params.updateValue(UIDevice.current.identifierForVendor?.uuidString ?? "", forKey: "id")
+        params.updateValue(UIDevice.current.identifierForVendor?.uuidString ?? "", forKey: "token")
+        params.updateValue(String(self.selected.univs.count), forKey: "num")
+        for (i, info) in self.selected.univs.enumerated() {
+            params.updateValue(info.univ, forKey: "univ\(i)")
+            params.updateValue(info.sj, forKey: "sj\(i)")
+            params.updateValue(info.jh, forKey: "jh\(i)")
+            params.updateValue(info.major, forKey: "major\(i)")
+        }
+        return params
     }
 }

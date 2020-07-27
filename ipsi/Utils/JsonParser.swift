@@ -29,3 +29,8 @@ func parseUnivList(json: JSON) -> [Univ] {
     }
     return univs
 }
+
+func parseSelectedList(json: JSON) -> [SelectedInfo] {
+    var infos: [SelectedInfo] = []
+    return infos
+}
