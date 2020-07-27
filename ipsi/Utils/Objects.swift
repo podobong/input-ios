@@ -81,14 +81,56 @@ class Univ: ObservableObject {
     }
 }
 
-class Univs: ObservableObject {
-    @Published var univs: [Univ]
+class PickerInfo: ObservableObject {
+    @Published var id: UUID = UUID()
+    @Published var sjNum: Int = 0 {
+        willSet {
+            self.jhNum = 0
+            self.majorNum = 0
+            self.id = UUID()
+        }
+    }
+    @Published var jhNum: Int = 0 {
+        willSet {
+            self.majorNum = 0
+            self.id = UUID()
+        }
+    }
+    @Published var majorNum: Int = 0
+}
+
+class SelectedInfo: ObservableObject {
+    @Published var univ: String
+    @Published var sj: String
+    @Published var jh: String
+    @Published var major: String
+    @Published var schedules: [Schedule]
+    
+    init(univ: String, sj: String, jh: String, major: String) {
+        self.univ = univ
+        self.sj = sj
+        self.jh = jh
+        self.major = major
+        self.schedules = []
+    }
+    
+    init(univ: String, sj: String, jh: String, major: String, schedules: [Schedule]) {
+        self.univ = univ
+        self.sj = sj
+        self.jh = jh
+        self.major = major
+        self.schedules = schedules
+    }
+}
+
+class SelectedInfos: ObservableObject {
+    @Published var univs: [SelectedInfo]
     
     init() {
         self.univs = []
     }
     
-    init(univs: [Univ]) {
+    init(univs: [SelectedInfo]) {
         self.univs = univs
     }
 }

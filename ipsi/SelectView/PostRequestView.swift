@@ -2,9 +2,9 @@ import SwiftUI
 
 
 struct PostRequestView: View {
-    @EnvironmentObject var selected: Univs
+    @EnvironmentObject var selected: SelectedInfos
     
     var body: some View {
-        Text("Hello, World!")
+        Text("PostRequestView")
     }
 }

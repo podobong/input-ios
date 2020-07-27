@@ -6,7 +6,7 @@ struct SelectRequestView: View {
     @State var statusCode: Int = 0
     @State var data = Data()
     @State var json = JSON()
-    @EnvironmentObject var selected: Univs
+    @EnvironmentObject var selected: SelectedInfos
     
     var body: some View {
         self.request(url: "http://ec2-54-180-101-171.ap-northeast-2.compute.amazonaws.com/")

@@ -4,7 +4,7 @@ import SwiftUI
 struct DataCheckView: View {
     @State var statusCode: Int = 0
     @State var data = Data()
-    @EnvironmentObject var selected: Univs
+    @EnvironmentObject var selected: SelectedInfos
     
     var body: some View {
         let uuid: String = UIDevice.current.identifierForVendor?.uuidString ?? ""
