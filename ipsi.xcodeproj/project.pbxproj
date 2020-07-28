@@ -12,8 +12,10 @@
 		F736EA4624CEA74400CF4B71 /* AllUnivListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736EA4524CEA74400CF4B71 /* AllUnivListLayout.swift */; };
 		F736EA4824CEA79300CF4B71 /* SelectedListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736EA4724CEA79300CF4B71 /* SelectedListLayout.swift */; };
 		F736EA4A24CEB0F200CF4B71 /* PostRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736EA4924CEB0F200CF4B71 /* PostRequestView.swift */; };
+		F73C107324CF1C1400D8E91E /* DdayLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73C107224CF1C1400D8E91E /* DdayLayout.swift */; };
 		F765CBC124CED86200F4F537 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F765CBC024CED86200F4F537 /* JsonParser.swift */; };
 		F765CBC324CEE51200F4F537 /* UnivDetailLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F765CBC224CEE51200F4F537 /* UnivDetailLayout.swift */; };
+		F799BF4124D031AC00335A0B /* MainTopBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F799BF4024D031AC00335A0B /* MainTopBarLayout.swift */; };
 		F7D0C78324CDCEB100CBB32D /* LoadingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0C78224CDCEB100CBB32D /* LoadingLayout.swift */; };
 		F7D0C78724CDD32400CBB32D /* ErrorLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0C78624CDD32400CBB32D /* ErrorLayout.swift */; };
 		F7D0C78924CDD3CC00CBB32D /* SelectRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0C78824CDD3CC00CBB32D /* SelectRequestView.swift */; };
@@ -38,8 +40,10 @@
 		F736EA4524CEA74400CF4B71 /* AllUnivListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUnivListLayout.swift; sourceTree = "<group>"; };
 		F736EA4724CEA79300CF4B71 /* SelectedListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedListLayout.swift; sourceTree = "<group>"; };
 		F736EA4924CEB0F200CF4B71 /* PostRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestView.swift; sourceTree = "<group>"; };
+		F73C107224CF1C1400D8E91E /* DdayLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayLayout.swift; sourceTree = "<group>"; };
 		F765CBC024CED86200F4F537 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		F765CBC224CEE51200F4F537 /* UnivDetailLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnivDetailLayout.swift; sourceTree = "<group>"; };
+		F799BF4024D031AC00335A0B /* MainTopBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopBarLayout.swift; sourceTree = "<group>"; };
 		F7D0C78224CDCEB100CBB32D /* LoadingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingLayout.swift; sourceTree = "<group>"; };
 		F7D0C78624CDD32400CBB32D /* ErrorLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLayout.swift; sourceTree = "<group>"; };
 		F7D0C78824CDD3CC00CBB32D /* SelectRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRequestView.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				F7D0C78A24CDD45800CBB32D /* MainView.swift */,
+				F799BF4024D031AC00335A0B /* MainTopBarLayout.swift */,
+				F73C107224CF1C1400D8E91E /* DdayLayout.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -276,9 +282,11 @@
 				F7D0C78B24CDD45800CBB32D /* MainView.swift in Sources */,
 				F7D60C4324CD73DE008ED606 /* HttpRequest.swift in Sources */,
 				F7D60C2D24CD6BF3008ED606 /* SceneDelegate.swift in Sources */,
+				F799BF4124D031AC00335A0B /* MainTopBarLayout.swift in Sources */,
 				F7D60C4124CD6F09008ED606 /* Objects.swift in Sources */,
 				F736EA4A24CEB0F200CF4B71 /* PostRequestView.swift in Sources */,
 				F765CBC324CEE51200F4F537 /* UnivDetailLayout.swift in Sources */,
+				F73C107324CF1C1400D8E91E /* DdayLayout.swift in Sources */,
 				F7D0C78724CDD32400CBB32D /* ErrorLayout.swift in Sources */,
 				F7D60C2F24CD6BF3008ED606 /* DataCheckView.swift in Sources */,
 				F7D0C78924CDD3CC00CBB32D /* SelectRequestView.swift in Sources */,

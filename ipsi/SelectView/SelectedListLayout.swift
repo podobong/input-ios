@@ -20,11 +20,19 @@ struct SelectedListLayout: View {
                             VStack(spacing: 0) {
                                 ForEach(0..<self.selected.univs.count, id: \.self) { i in
                                     VStack(spacing: 0) {
-                                        Text("\(self.selected.univs[i].univ) \(self.selected.univs[i].sj) \(self.selected.univs[i].jh) \(self.selected.univs[i].major)")
-                                            .font(.system(size: 20))
-                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                            .padding(.horizontal, 12)
-                                            .padding(.vertical, 6)
+                                        HStack(spacing: 0) {
+                                            Text("\(self.selected.univs[i].univ) \(self.selected.univs[i].sj) \(self.selected.univs[i].jh) \(self.selected.univs[i].major)")
+                                                .font(.system(size: 20))
+                                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                                .padding(.leading, 12)
+                                                .padding(.trailing, 6)
+                                                .padding(.vertical, 6)
+                                            Button(action: { self.selected.univs.remove(at: i) }) {
+                                                Text("✕")
+                                                    .foregroundColor(Color.red)
+                                                    .padding(.trailing, 12)
+                                            }
+                                        }
                                         Rectangle()
                                             .fill(Color("MiddleGray"))
                                             .frame(height: 0.5)

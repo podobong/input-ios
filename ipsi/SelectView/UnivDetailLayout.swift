@@ -49,6 +49,8 @@ struct UnivDetailLayout: View {
             Button(action: {
                 self.selected.univs.append(SelectedInfo(
                     univ: self.univ.name,
+                    logo: self.univ.logo,
+                    reviewUrl: self.univ.reviewUrl,
                     sj: self.univ.sjs[self.pickerInfo.sjNum].type,
                     jh: self.univ.sjs[self.pickerInfo.sjNum].jhs[self.pickerInfo.jhNum].name,
                     major: self.univ.sjs[self.pickerInfo.sjNum].jhs[self.pickerInfo.jhNum].majors[self.pickerInfo.majorNum].name

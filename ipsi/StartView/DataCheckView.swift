@@ -21,7 +21,7 @@ struct DataCheckView: View {
             } else if self.statusCode == 200 {
                 MainView().environmentObject(self.selected).onAppear {
                     do { try self.json = JSON(data: self.data) } catch { }
-                    self.selected.univs = parseSelectedList(json: self.json)
+                    self.selected.univs = seperateMajors(univs: parseSelectedList(json: self.json))
                 }
             } else {
                 ErrorLayout()
@@ -31,7 +31,6 @@ struct DataCheckView: View {
     
     func request(url: String, params: [String: String]) {
         get(url: url, params: params) { (data, response) in
-            print(String(data: data, encoding: .utf8)!)
             self.statusCode = response.statusCode
             if response.statusCode == 200 {
                 self.data = data

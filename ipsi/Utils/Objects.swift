@@ -101,21 +101,27 @@ class PickerInfo: ObservableObject {
 
 class SelectedInfo: ObservableObject {
     @Published var univ: String
+    @Published var logo: String
+    @Published var reviewUrl: String
     @Published var sj: String
     @Published var jh: String
     @Published var major: String
     @Published var schedules: [Schedule]
     
-    init(univ: String, sj: String, jh: String, major: String) {
+    init(univ: String, logo: String, reviewUrl: String, sj: String, jh: String, major: String) {
         self.univ = univ
+        self.logo = logo
+        self.reviewUrl = reviewUrl
         self.sj = sj
         self.jh = jh
         self.major = major
         self.schedules = []
     }
     
-    init(univ: String, sj: String, jh: String, major: String, schedules: [Schedule]) {
+    init(univ: String, logo: String, reviewUrl: String, sj: String, jh: String, major: String, schedules: [Schedule]) {
         self.univ = univ
+        self.logo = logo
+        self.reviewUrl = reviewUrl
         self.sj = sj
         self.jh = jh
         self.major = major
