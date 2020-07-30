@@ -8,13 +8,16 @@ struct SelectLayout: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) {
-                SelectTopBarLayout()
-                    .environmentObject(self.selected)
-                AllUnivListLayout(allUnivs: self.allUnivs, images: self.$images)
-                    .environmentObject(self.selected)
-                SelectedListLayout()
-                    .environmentObject(self.selected)
+            GeometryReader { metrics in
+                VStack(spacing: 0) {
+                    SelectTopBarLayout()
+                        .environmentObject(self.selected)
+                    AllUnivListLayout(allUnivs: self.allUnivs, images: self.$images)
+                        .environmentObject(self.selected)
+                    SelectedListLayout()
+                        .frame(height: metrics.size.height * 0.3)
+                        .environmentObject(self.selected)
+                }
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)

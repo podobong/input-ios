@@ -10,10 +10,14 @@ struct SelectedListLayout: View {
                 .fill(Color("MiddleGray"))
                 .frame(height: 0.5)
             Group {
-                if selected.new.count == 0 {
-                    Text("선택한 전형이 없습니다.")
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 260, maxHeight: 260)
-                        .background(Color("LightGray").edgesIgnoringSafeArea(.bottom))
+                if self.selected.new.count == 0 {
+                    VStack(spacing: 0) {
+                        Spacer()
+                        Text("선택한 전형이 없습니다.")
+                        Spacer()
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .background(Color("LightGray").edgesIgnoringSafeArea(.bottom))
                 } else {
                     VStack(spacing: 0) {
                         ScrollView {
@@ -41,7 +45,7 @@ struct SelectedListLayout: View {
                             }
                         }
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 260, maxHeight: 260)
+                    .frame(minWidth: 0, maxWidth: .infinity)
                     .background(Color("LightGray").edgesIgnoringSafeArea(.bottom))
                 }
             }

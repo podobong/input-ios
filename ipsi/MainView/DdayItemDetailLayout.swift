@@ -29,7 +29,7 @@ struct DdayItemDetailLayout: View {
                             }
                             Spacer().frame(height: 5)
                             HStack(spacing: 0) {
-                                Text("~ \(formatter.string(from: schedules[i].endDate))")
+                                Text(formatter.string(from: schedules[i].endDate))
                                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                                 Spacer().frame(width: 2)
                                 Text("까지")
