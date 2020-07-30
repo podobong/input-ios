@@ -8,7 +8,6 @@ struct DdayLayout: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
-                Text("").frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 0)
                 ForEach(0..<self.selected.old.count, id: \.self) { i in
                     DdayItemLayout(index: i, image: self.images[i])
                         .environmentObject(self.selected)

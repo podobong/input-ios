@@ -21,6 +21,7 @@
 		F7A8EF3924D248C8009F7732 /* MainBottomBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8EF3824D248C8009F7732 /* MainBottomBarLayout.swift */; };
 		F7A8EF3B24D24DE6009F7732 /* DdayItemLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8EF3A24D24DE6009F7732 /* DdayItemLayout.swift */; };
 		F7A8EF3D24D24F08009F7732 /* DdayItemDetailLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8EF3C24D24F08009F7732 /* DdayItemDetailLayout.swift */; };
+		F7A8EF3F24D28456009F7732 /* ReviewItemLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8EF3E24D28456009F7732 /* ReviewItemLayout.swift */; };
 		F7D0C78324CDCEB100CBB32D /* LoadingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0C78224CDCEB100CBB32D /* LoadingLayout.swift */; };
 		F7D0C78724CDD32400CBB32D /* ErrorLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0C78624CDD32400CBB32D /* ErrorLayout.swift */; };
 		F7D0C78924CDD3CC00CBB32D /* SelectRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0C78824CDD3CC00CBB32D /* SelectRequestView.swift */; };
@@ -54,6 +55,7 @@
 		F7A8EF3824D248C8009F7732 /* MainBottomBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomBarLayout.swift; sourceTree = "<group>"; };
 		F7A8EF3A24D24DE6009F7732 /* DdayItemLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayItemLayout.swift; sourceTree = "<group>"; };
 		F7A8EF3C24D24F08009F7732 /* DdayItemDetailLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayItemDetailLayout.swift; sourceTree = "<group>"; };
+		F7A8EF3E24D28456009F7732 /* ReviewItemLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItemLayout.swift; sourceTree = "<group>"; };
 		F7D0C78224CDCEB100CBB32D /* LoadingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingLayout.swift; sourceTree = "<group>"; };
 		F7D0C78624CDD32400CBB32D /* ErrorLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLayout.swift; sourceTree = "<group>"; };
 		F7D0C78824CDD3CC00CBB32D /* SelectRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRequestView.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				F7A8EF3C24D24F08009F7732 /* DdayItemDetailLayout.swift */,
 				F7A8EF3424D24823009F7732 /* CalendarLayout.swift */,
 				F7A8EF3624D24832009F7732 /* ReviewLayout.swift */,
+				F7A8EF3E24D28456009F7732 /* ReviewItemLayout.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				F7D0C78B24CDD45800CBB32D /* MainView.swift in Sources */,
 				F7D60C4324CD73DE008ED606 /* HttpRequest.swift in Sources */,
 				F7D60C2D24CD6BF3008ED606 /* SceneDelegate.swift in Sources */,
+				F7A8EF3F24D28456009F7732 /* ReviewItemLayout.swift in Sources */,
 				F799BF4124D031AC00335A0B /* MainTopBarLayout.swift in Sources */,
 				F7A8EF3924D248C8009F7732 /* MainBottomBarLayout.swift in Sources */,
 				F7D60C4124CD6F09008ED606 /* Objects.swift in Sources */,

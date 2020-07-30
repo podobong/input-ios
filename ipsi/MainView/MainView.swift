@@ -33,9 +33,11 @@ struct MainView: View {
                 DdayLayout(images: self.$images)
                     .environmentObject(self.selected)
             } else if self.viewNum == 1 {
-                CalendarLayout()
+                CalendarLayout(images: self.$images)
+                    .environmentObject(self.selected)
             } else {
-                ReviewLayout()
+                ReviewLayout(images: self.$images)
+                    .environmentObject(self.selected)
             }
         })
     }

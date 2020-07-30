@@ -2,8 +2,6 @@ import SwiftUI
 
 
 struct DdayItemLayout: View {
-    @State var isClicked: Bool = false
-    @EnvironmentObject var selected: SelectedInfos
     var index: Int
     var image: Data
     var dday: Int {
@@ -16,6 +14,8 @@ struct DdayItemLayout: View {
             return interval / 86400
         }
     }
+    @State var isClicked: Bool = false
+    @EnvironmentObject var selected: SelectedInfos
     
     var body: some View {
         let info: SelectedInfo = self.selected.old[self.index]
@@ -68,7 +68,7 @@ struct DdayItemLayout: View {
                         .frame(width: 24, height: 24)
                         .padding(.trailing, 16)
                 }
-                .frame(height: 140)
+                .padding(.vertical, 24)
             }
             Rectangle()
                 .fill(Color("MiddleGray"))

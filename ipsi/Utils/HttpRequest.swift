@@ -1,4 +1,5 @@
 import SwiftUI
+import WebKit
 
 
 func createParamString(params: [String: String]) -> String {
@@ -44,4 +45,16 @@ func post(url: String, params: [String: String] = [:], function: @escaping (Data
             function(data!, httpResponse)
         }
     }.resume()
+}
+
+struct WebView : UIViewRepresentable {
+    let request: URLRequest
+    
+    func makeUIView(context: Context) -> WKWebView  {
+        return WKWebView()
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        uiView.load(request)
+    }
 }
