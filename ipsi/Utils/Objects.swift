@@ -1,5 +1,7 @@
 import SwiftUI
 
+let MAX_PAGE: Int = 120
+
 
 class Schedule: ObservableObject {
     @Published var description: String
