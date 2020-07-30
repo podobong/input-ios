@@ -58,13 +58,14 @@ func parseSelectedList(json: JSON) -> [Univ] {
                         let endDate: DateFormatter = DateFormatter()
                         endDate.locale = Locale(identifier: "ko_KR")
                         endDate.dateFormat = "yyyy-MM-dd-HH-mm-ss"
-                        let dict: [String: JSON] = schedule.dictionaryValue
-                        schedules.append(Schedule(
-                            isValid: dict["is_valid"]!.boolValue,
-                            description: dict["description"]!.rawString()!,
-                            startDate: startDate.date(from: dict["start_date"]!.rawString()!) ?? Date(),
-                            endDate: endDate.date(from: dict["end_date"]!.rawString()!) ?? Date()
-                        ))
+                        if schedule["is_valid"].intValue == 1 {
+                            let dict: [String: JSON] = schedule.dictionaryValue
+                            schedules.append(Schedule(
+                                description: dict["description"]!.rawString()!,
+                                startDate: startDate.date(from: dict["start_date"]!.rawString()!) ?? Date(),
+                                endDate: endDate.date(from: dict["end_date"]!.rawString()!) ?? Date()
+                            ))
+                        }
                     }
                     majors.append(Major(name: name, schedules: schedules))
                 }

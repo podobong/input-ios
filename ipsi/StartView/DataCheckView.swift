@@ -19,9 +19,11 @@ struct DataCheckView: View {
                 SelectRequestView()
                     .environmentObject(self.selected)
             } else if self.statusCode == 200 {
-                MainView().environmentObject(self.selected).onAppear {
+                MainView()
+                    .environmentObject(self.selected)
+                    .onAppear {
                     do { try self.json = JSON(data: self.data) } catch { }
-                    self.selected.univs = seperateMajors(univs: parseSelectedList(json: self.json))
+                    self.selected.old = seperateMajors(univs: parseSelectedList(json: self.json))
                 }
             } else {
                 ErrorLayout()

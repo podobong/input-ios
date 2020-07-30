@@ -2,13 +2,17 @@ import SwiftUI
 
 
 class Schedule: ObservableObject {
-    @Published var isValid: Bool
     @Published var description: String
     @Published var startDate: Date
     @Published var endDate: Date
     
-    init(isValid: Bool, description: String, startDate: Date, endDate: Date) {
-        self.isValid = isValid
+    init() {
+        self.description = ""
+        self.startDate = Date()
+        self.endDate = Date()
+    }
+    
+    init(description: String, startDate: Date, endDate: Date) {
         self.description = description
         self.startDate = startDate
         self.endDate = endDate
@@ -127,16 +131,35 @@ class SelectedInfo: ObservableObject {
         self.major = major
         self.schedules = schedules
     }
+    
+    func copy() -> SelectedInfo {
+        var newSchedules: [Schedule] = []
+        for schedule in self.schedules {
+            newSchedules.append(schedule)
+        }
+        return SelectedInfo(
+            univ: self.univ,
+            logo: self.logo,
+            reviewUrl: self.reviewUrl,
+            sj: self.sj,
+            jh: self.jh,
+            major: self.major,
+            schedules: newSchedules
+        )
+    }
 }
 
 class SelectedInfos: ObservableObject {
-    @Published var univs: [SelectedInfo]
+    @Published var old: [SelectedInfo]
+    @Published var new: [SelectedInfo]
     
     init() {
-        self.univs = []
+        self.old = []
+        self.new = []
     }
     
-    init(univs: [SelectedInfo]) {
-        self.univs = univs
+    init(old: [SelectedInfo], new: [SelectedInfo]) {
+        self.old = old
+        self.new = new
     }
 }

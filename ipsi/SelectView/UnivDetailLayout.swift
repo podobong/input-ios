@@ -11,43 +11,82 @@ struct UnivDetailLayout: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
+                Spacer()
+                Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
+                    Text("✕")
+                        .font(.system(size: 24))
+                        .foregroundColor(Color.red)
+                }
+            }
+            .padding(.top, 10)
+            .padding(.trailing, 10)
+            HStack(spacing: 0) {
                 Image(uiImage: (UIImage(data: self.image) ?? UIImage(named: "Blank")!))
-                    .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
                     .resizable()
-                    .frame(width: 40, height: 40)
-                    .padding(.leading, 16)
-                    .padding(.trailing, 12)
+                    .frame(width: 50, height: 50)
+                    .padding(.trailing, 16)
                 Text(self.univ.name)
                     .foregroundColor(Color.black)
-                    .font(.system(size: 24))
+                    .font(.system(size: 24, weight: .semibold))
+                    .frame(height: 60)
             }
-            Picker(selection: self.$pickerInfo.sjNum, label: Text("수시/정시")) {
-                Text("수시")
-            }
-            /* Use when jeongsi data added
-            Picker(selection: self.$pickerInfo.sjNum, label: Text("수시/정시")) {
-                ForEach(0..<self.univ.sjs.count, id: \.self) { i in
-                    Text(self.univ.sjs[i].type)
+            .padding(.bottom, 30)
+            Spacer()
+            HStack(spacing: 0) {
+                Text("수시/정시")
+                    .font(.system(size: 20))
+                    .frame(width: 100)
+                Picker(
+                    selection: self.$pickerInfo.sjNum,
+                    label: Text("")
+                ) { Text("수시") }
+                /* Use when jeongsi data added
+                Picker(selection: self.$pickerInfo.sjNum, label: Text("수시/정시")) {
+                    ForEach(0..<self.univ.sjs.count, id: \.self) { i in
+                        Text(self.univ.sjs[i].type)
+                    }
                 }
+                */
+                .frame(width: 270, height: 100)
+                .clipped()
+                .padding(.trailing, 10)
             }
-            */
-            .frame(height: 100)
-            Picker(selection: self.$pickerInfo.jhNum, label: Text("전형")) {
-                ForEach(0..<self.univ.sjs[self.pickerInfo.sjNum].jhs.count, id: \.self) { i in
-                    Text(self.univ.sjs[self.pickerInfo.sjNum].jhs[i].name)
+            HStack(spacing: 0) {
+                Text("전형")
+                    .font(.system(size: 20))
+                    .frame(width: 100)
+                Picker(
+                    selection: self.$pickerInfo.jhNum,
+                    label: Text("")
+                ) {
+                    ForEach(0..<self.univ.sjs[self.pickerInfo.sjNum].jhs.count, id: \.self) { i in
+                        Text(self.univ.sjs[self.pickerInfo.sjNum].jhs[i].name)
+                    }
                 }
+                .id(self.pickerInfo.id)
+                .frame(width: 270, height: 170)
+                .clipped()
+                .padding(.trailing, 10)
             }
-            .id(self.pickerInfo.id)
-            .frame(height: 170)
-            Picker(selection: self.$pickerInfo.majorNum, label: Text("학과")) {
-                ForEach(0..<self.univ.sjs[self.pickerInfo.sjNum].jhs[self.pickerInfo.jhNum].majors.count, id: \.self) { i in
-                    Text(self.univ.sjs[self.pickerInfo.sjNum].jhs[self.pickerInfo.jhNum].majors[i].name)
+            HStack(spacing: 0) {
+                Text("학과")
+                    .font(.system(size: 20))
+                    .frame(width: 100)
+                Picker(
+                    selection: self.$pickerInfo.majorNum,
+                    label: Text("")
+                ) {
+                    ForEach(0..<self.univ.sjs[self.pickerInfo.sjNum].jhs[self.pickerInfo.jhNum].majors.count, id: \.self) { i in
+                        Text(self.univ.sjs[self.pickerInfo.sjNum].jhs[self.pickerInfo.jhNum].majors[i].name)
+                    }
                 }
+                .id(self.pickerInfo.id)
+                .frame(width: 270, height: 170)
+                .clipped()
+                .padding(.trailing, 10)
             }
-            .id(self.pickerInfo.id)
-            .frame(height: 170)
             Button(action: {
-                self.selected.univs.append(SelectedInfo(
+                self.selected.new.append(SelectedInfo(
                     univ: self.univ.name,
                     logo: self.univ.logo,
                     reviewUrl: self.univ.reviewUrl,
@@ -57,8 +96,9 @@ struct UnivDetailLayout: View {
                 ))
                 self.presentationMode.wrappedValue.dismiss()
             }) {
-                Text("확인")
+                Text("확인").padding(.top, 30)
             }
+            Spacer()
         }
     }
 }

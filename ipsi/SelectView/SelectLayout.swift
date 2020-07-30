@@ -10,8 +10,11 @@ struct SelectLayout: View {
         NavigationView {
             VStack(spacing: 0) {
                 SelectTopBarLayout()
-                AllUnivListLayout(allUnivs: self.allUnivs, images: self.$images).environmentObject(self.selected)
-                SelectedListLayout().environmentObject(self.selected)
+                    .environmentObject(self.selected)
+                AllUnivListLayout(allUnivs: self.allUnivs, images: self.$images)
+                    .environmentObject(self.selected)
+                SelectedListLayout()
+                    .environmentObject(self.selected)
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)

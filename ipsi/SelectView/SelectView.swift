@@ -21,6 +21,7 @@ struct SelectView: View {
                             get(url: univ.logo) { (data, _) in
                                 self.images[i] = data
                         }
+                        self.selected.new = self.selected.old
                     }
                 }
             }

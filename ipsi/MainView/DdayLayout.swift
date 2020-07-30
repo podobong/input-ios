@@ -2,17 +2,18 @@ import SwiftUI
 
 
 struct DdayLayout: View {
+    @Binding var images: [Data]
     @EnvironmentObject var selected: SelectedInfos
     
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
                 Text("").frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 0)
-                ForEach(0..<self.selected.univs.count, id: \.self) { i in
-                    Text(self.selected.univs[i].univ)
+                ForEach(0..<self.selected.old.count, id: \.self) { i in
+                    DdayItemLayout(index: i, image: self.images[i])
+                        .environmentObject(self.selected)
                 }
             }
         }
     }
 }
-

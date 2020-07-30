@@ -16,6 +16,11 @@
 		F765CBC124CED86200F4F537 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F765CBC024CED86200F4F537 /* JsonParser.swift */; };
 		F765CBC324CEE51200F4F537 /* UnivDetailLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F765CBC224CEE51200F4F537 /* UnivDetailLayout.swift */; };
 		F799BF4124D031AC00335A0B /* MainTopBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F799BF4024D031AC00335A0B /* MainTopBarLayout.swift */; };
+		F7A8EF3524D24823009F7732 /* CalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8EF3424D24823009F7732 /* CalendarLayout.swift */; };
+		F7A8EF3724D24832009F7732 /* ReviewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8EF3624D24832009F7732 /* ReviewLayout.swift */; };
+		F7A8EF3924D248C8009F7732 /* MainBottomBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8EF3824D248C8009F7732 /* MainBottomBarLayout.swift */; };
+		F7A8EF3B24D24DE6009F7732 /* DdayItemLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8EF3A24D24DE6009F7732 /* DdayItemLayout.swift */; };
+		F7A8EF3D24D24F08009F7732 /* DdayItemDetailLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A8EF3C24D24F08009F7732 /* DdayItemDetailLayout.swift */; };
 		F7D0C78324CDCEB100CBB32D /* LoadingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0C78224CDCEB100CBB32D /* LoadingLayout.swift */; };
 		F7D0C78724CDD32400CBB32D /* ErrorLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0C78624CDD32400CBB32D /* ErrorLayout.swift */; };
 		F7D0C78924CDD3CC00CBB32D /* SelectRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D0C78824CDD3CC00CBB32D /* SelectRequestView.swift */; };
@@ -44,6 +49,11 @@
 		F765CBC024CED86200F4F537 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		F765CBC224CEE51200F4F537 /* UnivDetailLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnivDetailLayout.swift; sourceTree = "<group>"; };
 		F799BF4024D031AC00335A0B /* MainTopBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopBarLayout.swift; sourceTree = "<group>"; };
+		F7A8EF3424D24823009F7732 /* CalendarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLayout.swift; sourceTree = "<group>"; };
+		F7A8EF3624D24832009F7732 /* ReviewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewLayout.swift; sourceTree = "<group>"; };
+		F7A8EF3824D248C8009F7732 /* MainBottomBarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomBarLayout.swift; sourceTree = "<group>"; };
+		F7A8EF3A24D24DE6009F7732 /* DdayItemLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayItemLayout.swift; sourceTree = "<group>"; };
+		F7A8EF3C24D24F08009F7732 /* DdayItemDetailLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayItemDetailLayout.swift; sourceTree = "<group>"; };
 		F7D0C78224CDCEB100CBB32D /* LoadingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingLayout.swift; sourceTree = "<group>"; };
 		F7D0C78624CDD32400CBB32D /* ErrorLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLayout.swift; sourceTree = "<group>"; };
 		F7D0C78824CDD3CC00CBB32D /* SelectRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRequestView.swift; sourceTree = "<group>"; };
@@ -171,7 +181,12 @@
 			children = (
 				F7D0C78A24CDD45800CBB32D /* MainView.swift */,
 				F799BF4024D031AC00335A0B /* MainTopBarLayout.swift */,
+				F7A8EF3824D248C8009F7732 /* MainBottomBarLayout.swift */,
 				F73C107224CF1C1400D8E91E /* DdayLayout.swift */,
+				F7A8EF3A24D24DE6009F7732 /* DdayItemLayout.swift */,
+				F7A8EF3C24D24F08009F7732 /* DdayItemDetailLayout.swift */,
+				F7A8EF3424D24823009F7732 /* CalendarLayout.swift */,
+				F7A8EF3624D24832009F7732 /* ReviewLayout.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -275,14 +290,19 @@
 				F736EA4224CEA4EE00CF4B71 /* SelectLayout.swift in Sources */,
 				F736EA4624CEA74400CF4B71 /* AllUnivListLayout.swift in Sources */,
 				F765CBC124CED86200F4F537 /* JsonParser.swift in Sources */,
+				F7A8EF3524D24823009F7732 /* CalendarLayout.swift in Sources */,
 				F736EA4424CEA72000CF4B71 /* SelectTopBarLayout.swift in Sources */,
 				F736EA4824CEA79300CF4B71 /* SelectedListLayout.swift in Sources */,
+				F7A8EF3724D24832009F7732 /* ReviewLayout.swift in Sources */,
+				F7A8EF3D24D24F08009F7732 /* DdayItemDetailLayout.swift in Sources */,
 				F7D0C78D24CDDB0B00CBB32D /* SelectView.swift in Sources */,
 				F7D60C2B24CD6BF3008ED606 /* AppDelegate.swift in Sources */,
+				F7A8EF3B24D24DE6009F7732 /* DdayItemLayout.swift in Sources */,
 				F7D0C78B24CDD45800CBB32D /* MainView.swift in Sources */,
 				F7D60C4324CD73DE008ED606 /* HttpRequest.swift in Sources */,
 				F7D60C2D24CD6BF3008ED606 /* SceneDelegate.swift in Sources */,
 				F799BF4124D031AC00335A0B /* MainTopBarLayout.swift in Sources */,
+				F7A8EF3924D248C8009F7732 /* MainBottomBarLayout.swift in Sources */,
 				F7D60C4124CD6F09008ED606 /* Objects.swift in Sources */,
 				F736EA4A24CEB0F200CF4B71 /* PostRequestView.swift in Sources */,
 				F765CBC324CEE51200F4F537 /* UnivDetailLayout.swift in Sources */,
